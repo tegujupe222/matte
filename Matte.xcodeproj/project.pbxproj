@@ -29,9 +29,22 @@
 		27A9802F2E40FC1B00301EB8 /* MatteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		275F2F8D2E424E57002378FC /* Exceptions for "Matte" folder in "Matte" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 27A980162E40FC1A00301EB8 /* Matte */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		27A980192E40FC1A00301EB8 /* Matte */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				275F2F8D2E424E57002378FC /* Exceptions for "Matte" folder in "Matte" target */,
+			);
 			path = Matte;
 			sourceTree = "<group>";
 		};
@@ -397,6 +410,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Matte/Info.plist;
+				INFOPLIST_KEY_GEMINI_API_KEY = YOUR_GEMINI_API_KEY_HERE;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -436,6 +451,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Matte/Info.plist;
+				INFOPLIST_KEY_GEMINI_API_KEY = YOUR_GEMINI_API_KEY_HERE;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
