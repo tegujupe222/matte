@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'No build step required'",
+    "build": "mkdir -p public && echo 'API server ready' > public/index.html",
     "start": "vercel dev"
   },
   "dependencies": {
