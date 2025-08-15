@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "functions": {
+    "api/ai/*.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/auth/*.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/family/*.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/emergency/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/ai/(.*)",
+      "dest": "/api/ai/$1"
+    },
+    {
+      "src": "/api/auth/(.*)",
+      "dest": "/api/auth/$1"
+    },
+    {
+      "src": "/api/family/(.*)",
+      "dest": "/api/family/$1"
+    },
+    {
+      "src": "/api/emergency/(.*)",
+      "dest": "/api/emergency/$1"
+    }
+  ]
+}

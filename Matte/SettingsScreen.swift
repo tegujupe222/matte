@@ -25,8 +25,20 @@ struct SettingsScreen: View {
                     // 緊急連絡先
                     EmergencyContactsCard(
                         contacts: $settings.emergencyContacts,
-                        onAdd: { showingEmergencyContacts = true }
+                        onAddContact: { showingEmergencyContacts = true }
                     )
+                    
+                    // 緊急SOS設定
+                    EmergencySOSSettingsCard()
+                    
+                    // 家族連携設定
+                    FamilyConnectionSettingsCard()
+                    
+                    // 音声アシスタント設定
+                    VoiceAssistantSettingsCard()
+                    
+                    // 統計・レポート設定
+                    StatisticsSettingsCard()
                     
                     // 教育コンテンツ
                     EducationSettingsCard(onTap: { showingEducationContent = true })
@@ -156,82 +168,7 @@ struct SettingRow: View {
     }
 }
 
-struct EmergencyContactsCard: View {
-    @Binding var contacts: [EmergencyContact]
-    let onAdd: () -> Void
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            HStack {
-                Image(systemName: "phone.circle.fill")
-                    .foregroundColor(.red)
-                Text("緊急連絡先")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                Spacer()
-                
-                Button("追加") {
-                    onAdd()
-                }
-                .font(.subheadline)
-                .foregroundColor(.blue)
-            }
-            
-            if contacts.isEmpty {
-                Text("緊急連絡先が設定されていません")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .padding()
-            } else {
-                ForEach(contacts.prefix(3), id: \.id) { contact in
-                    ContactRow(contact: contact)
-                }
-                
-                if contacts.count > 3 {
-                    Button("すべて表示") {
-                        onAdd()
-                    }
-                    .font(.subheadline)
-                    .foregroundColor(.blue)
-                }
-            }
-        }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(15)
-        .shadow(radius: 2)
-    }
-}
 
-struct ContactRow: View {
-    let contact: EmergencyContact
-    
-    var body: some View {
-        HStack {
-            Image(systemName: "person.circle.fill")
-                .foregroundColor(.green)
-                .frame(width: 30)
-            
-            VStack(alignment: .leading, spacing: 2) {
-                Text(contact.name)
-                    .font(.subheadline)
-                    .fontWeight(.medium)
-                
-                Text(contact.phoneNumber)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            Spacer()
-            
-            Text(contact.relationship)
-                .font(.caption)
-                .foregroundColor(.secondary)
-        }
-        .padding(.vertical, 5)
-    }
-}
 
 struct EducationSettingsCard: View {
     let onTap: () -> Void
@@ -456,6 +393,267 @@ struct EducationCategoryCard: View {
         case .malware:
             return "マルウェアの脅威と対策について学びます"
         }
+    }
+}
+
+// MARK: - New Settings Cards
+struct EmergencySOSSettingsCard: View {
+    @State private var isSOSEnabled = true
+    @State private var triggerMethod: SOSTriggerMethod = .powerButton
+    @State private var autoCallEnabled = true
+    @State private var autoMessageEnabled = true
+    @State private var locationSharingEnabled = true
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            HStack {
+                Image(systemName: "sos")
+                    .foregroundColor(.red)
+                Text("緊急SOS設定")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            
+            VStack(spacing: 15) {
+                SettingRow(
+                    title: "SOS機能を有効にする",
+                    description: "緊急時に素早く家族に連絡",
+                    isEnabled: $isSOSEnabled
+                )
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("トリガー方法")
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                    
+                    Picker("トリガー方法", selection: $triggerMethod) {
+                        ForEach(SOSTriggerMethod.allCases, id: \.self) { method in
+                            Text(method.rawValue).tag(method)
+                        }
+                    }
+                    .pickerStyle(MenuPickerStyle())
+                    
+                    Text(triggerMethod.description)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+                
+                SettingRow(
+                    title: "自動通話",
+                    description: "SOS発動時に自動で電話",
+                    isEnabled: $autoCallEnabled
+                )
+                
+                SettingRow(
+                    title: "自動メッセージ",
+                    description: "SOS発動時に自動でメッセージ送信",
+                    isEnabled: $autoMessageEnabled
+                )
+                
+                SettingRow(
+                    title: "位置情報共有",
+                    description: "SOS発動時に位置情報を共有",
+                    isEnabled: $locationSharingEnabled
+                )
+            }
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(15)
+        .shadow(radius: 2)
+    }
+}
+
+struct FamilyConnectionSettingsCard: View {
+    @State private var isFamilyEnabled = true
+    @State private var isLocationSharingEnabled = true
+    @State private var isActivitySharingEnabled = true
+    @State private var isEmergencySharingEnabled = true
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            HStack {
+                Image(systemName: "person.3.fill")
+                    .foregroundColor(.purple)
+                Text("家族連携設定")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            
+            VStack(spacing: 15) {
+                SettingRow(
+                    title: "家族連携を有効にする",
+                    description: "家族との安全な連携機能",
+                    isEnabled: $isFamilyEnabled
+                )
+                
+                SettingRow(
+                    title: "位置情報共有",
+                    description: "家族と位置情報を共有",
+                    isEnabled: $isLocationSharingEnabled
+                )
+                
+                SettingRow(
+                    title: "活動状況共有",
+                    description: "家族に活動状況を共有",
+                    isEnabled: $isActivitySharingEnabled
+                )
+                
+                SettingRow(
+                    title: "緊急時共有",
+                    description: "緊急時に家族に情報を共有",
+                    isEnabled: $isEmergencySharingEnabled
+                )
+            }
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(15)
+        .shadow(radius: 2)
+    }
+}
+
+struct VoiceAssistantSettingsCard: View {
+    @State private var isVoiceEnabled = true
+    @State private var isVibrationEnabled = true
+    @State private var voiceSpeed: Double = 0.5
+    @State private var voiceVolume: Double = 0.8
+    @State private var selectedLanguage = "ja-JP"
+    
+    let languages = [
+        ("日本語", "ja-JP"),
+        ("English", "en-US"),
+        ("中文", "zh-CN"),
+        ("한국어", "ko-KR")
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            HStack {
+                Image(systemName: "mic.fill")
+                    .foregroundColor(.blue)
+                Text("音声アシスタント設定")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            
+            VStack(spacing: 15) {
+                SettingRow(
+                    title: "音声アシスタント",
+                    description: "音声でアプリを操作",
+                    isEnabled: $isVoiceEnabled
+                )
+                
+                SettingRow(
+                    title: "振動フィードバック",
+                    description: "音声認識時に振動",
+                    isEnabled: $isVibrationEnabled
+                )
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Text("言語")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                        Spacer()
+                    }
+                    
+                    Picker("言語", selection: $selectedLanguage) {
+                        ForEach(languages, id: \.1) { language in
+                            Text(language.0).tag(language.1)
+                        }
+                    }
+                    .pickerStyle(MenuPickerStyle())
+                }
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Text("音声速度")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                        Spacer()
+                        Text("\(Int(voiceSpeed * 100))%")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Slider(value: $voiceSpeed, in: 0.3...1.0, step: 0.1)
+                        .accentColor(.blue)
+                }
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Text("音量")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                        Spacer()
+                        Text("\(Int(voiceVolume * 100))%")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Slider(value: $voiceVolume, in: 0.0...1.0, step: 0.1)
+                        .accentColor(.blue)
+                }
+            }
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(15)
+        .shadow(radius: 2)
+    }
+}
+
+struct StatisticsSettingsCard: View {
+    @State private var isStatisticsEnabled = true
+    @State private var isDataSharingEnabled = false
+    @State private var isAchievementEnabled = true
+    @State private var isRecommendationEnabled = true
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            HStack {
+                Image(systemName: "chart.bar.fill")
+                    .foregroundColor(.green)
+                Text("統計・レポート設定")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            
+            VStack(spacing: 15) {
+                SettingRow(
+                    title: "統計機能を有効にする",
+                    description: "セキュリティ状況の統計を表示",
+                    isEnabled: $isStatisticsEnabled
+                )
+                
+                SettingRow(
+                    title: "データ共有",
+                    description: "匿名化されたデータを共有（改善のため）",
+                    isEnabled: $isDataSharingEnabled
+                )
+                
+                SettingRow(
+                    title: "達成度表示",
+                    description: "セキュリティ達成度を表示",
+                    isEnabled: $isAchievementEnabled
+                )
+                
+                SettingRow(
+                    title: "推奨事項表示",
+                    description: "セキュリティ改善の推奨事項を表示",
+                    isEnabled: $isRecommendationEnabled
+                )
+            }
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(15)
+        .shadow(radius: 2)
     }
 }
 

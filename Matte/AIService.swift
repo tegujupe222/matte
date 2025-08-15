@@ -7,6 +7,8 @@
 
 import Foundation
 import SwiftUI
+import Speech
+import AVFoundation
 
 // MARK: - AI Service Protocol
 protocol AIServiceProtocol {
@@ -87,77 +89,338 @@ struct EducationalContent {
     let examples: [String]
 }
 
-// MARK: - Gemini AI Service
-class GeminiAIService: AIServiceProtocol, ObservableObject {
-    private let apiKey: String
-    private let baseURL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
+
+
+// MARK: - AI Service
+class AIService: ObservableObject {
+    @Published var isListening = false
+    @Published var recognizedText = ""
+    @Published var voiceCommands: [VoiceCommand] = []
+    
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))
+    private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
+    private var recognitionTask: SFSpeechRecognitionTask?
+    private let audioEngine = AVAudioEngine()
     
     init() {
-        // Info.plistからAPIキーを取得
-        self.apiKey = Bundle.main.infoDictionary?["GEMINI_API_KEY"] as? String ?? ""
+        setupVoiceCommands()
+        requestSpeechAuthorization()
     }
     
-    // MARK: - Main AI Methods
-    
-    func analyzeScamContent(_ content: String, type: ScamType) async throws -> ScamAnalysisResult {
-        let prompt = createScamAnalysisPrompt(content: content, type: type)
-        let response = try await callGeminiAPI(prompt: prompt)
-        return parseScamAnalysisResponse(response, type: type)
+    // MARK: - Voice Assistant
+    private func setupVoiceCommands() {
+        voiceCommands = [
+            VoiceCommand(
+                id: UUID(),
+                command: "セキュリティチェック",
+                action: .checkSecurity,
+                description: "現在のセキュリティ状況を確認",
+                isEnabled: true
+            ),
+            VoiceCommand(
+                id: UUID(),
+                command: "緊急通話",
+                action: .emergencyCall,
+                description: "緊急連絡先に電話",
+                isEnabled: true
+            ),
+            VoiceCommand(
+                id: UUID(),
+                command: "警告を読む",
+                action: .readAlerts,
+                description: "最新の警告を読み上げ",
+                isEnabled: true
+            ),
+            VoiceCommand(
+                id: UUID(),
+                command: "設定を開く",
+                action: .openSettings,
+                description: "設定画面を開く",
+                isEnabled: true
+            ),
+            VoiceCommand(
+                id: UUID(),
+                command: "家族に電話",
+                action: .callFamily,
+                description: "家族に電話",
+                isEnabled: true
+            )
+        ]
     }
     
-    func generateSafetyRecommendations(_ context: String) async throws -> [String] {
-        let prompt = createRecommendationsPrompt(context: context)
-        let response = try await callGeminiAPI(prompt: prompt)
-        return parseRecommendationsResponse(response)
+    private func requestSpeechAuthorization() {
+        SFSpeechRecognizer.requestAuthorization { status in
+            DispatchQueue.main.async {
+                switch status {
+                case .authorized:
+                    print("音声認識が許可されました")
+                case .denied:
+                    print("音声認識が拒否されました")
+                case .restricted:
+                    print("音声認識が制限されています")
+                case .notDetermined:
+                    print("音声認識の許可が未決定です")
+                @unknown default:
+                    print("未知の音声認識ステータス")
+                }
+            }
+        }
     }
     
-    func answerUserQuestion(_ question: String) async throws -> String {
-        let prompt = createQuestionAnswerPrompt(question: question)
-        let response = try await callGeminiAPI(prompt: prompt)
-        return parseQuestionAnswerResponse(response)
+    func startListening() {
+        guard !isListening else { return }
+        
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+            
+            recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+            guard let recognitionRequest = recognitionRequest else { return }
+            
+            recognitionRequest.shouldReportPartialResults = true
+            
+            let inputNode = audioEngine.inputNode
+            let recordingFormat = inputNode.outputFormat(forBus: 0)
+            inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
+                recognitionRequest.append(buffer)
+            }
+            
+            audioEngine.prepare()
+            try audioEngine.start()
+            
+            recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { result, error in
+                if let result = result {
+                    self.recognizedText = result.bestTranscription.formattedString
+                    self.processVoiceCommand(self.recognizedText)
+                }
+                
+                if error != nil || result?.isFinal == true {
+                    self.stopListening()
+                }
+            }
+            
+            isListening = true
+        } catch {
+            print("音声認識の開始に失敗しました: \(error)")
+        }
     }
     
-    func generateEducationalContent(_ topic: String) async throws -> EducationalContent {
-        let prompt = createEducationalContentPrompt(topic: topic)
-        let response = try await callGeminiAPI(prompt: prompt)
-        return parseEducationalContentResponse(response, topic: topic)
+    func stopListening() {
+        audioEngine.stop()
+        audioEngine.inputNode.removeTap(onBus: 0)
+        recognitionRequest?.endAudio()
+        recognitionTask?.cancel()
+        
+        isListening = false
+        recognizedText = ""
     }
     
-    func analyzeCallRisk(_ phoneNumber: String, context: String?) async throws -> CallRiskAnalysis {
-        let prompt = createCallRiskPrompt(phoneNumber: phoneNumber, context: context)
-        let response = try await callGeminiAPI(prompt: prompt)
-        return parseCallRiskResponse(response)
+    private func processVoiceCommand(_ text: String) {
+        let lowercasedText = text.lowercased()
+        
+        for command in voiceCommands where command.isEnabled {
+            for trigger in command.action.voiceTriggers {
+                if lowercasedText.contains(trigger.lowercased()) {
+                    executeVoiceAction(command.action)
+                    return
+                }
+            }
+        }
     }
     
-    func analyzeEmailRisk(_ emailContent: String) async throws -> EmailRiskAnalysis {
-        let prompt = createEmailRiskPrompt(emailContent: emailContent)
-        let response = try await callGeminiAPI(prompt: prompt)
-        return parseEmailRiskResponse(response)
+    private func executeVoiceAction(_ action: VoiceAction) {
+        switch action {
+        case .checkSecurity:
+            // セキュリティ状況を音声で報告
+            speak("セキュリティ状況を確認します。現在の保護状況は良好です。")
+        case .emergencyCall:
+            // 緊急通話を実行
+            speak("緊急通話を開始します。")
+        case .readAlerts:
+            // 最新の警告を読み上げ
+            speak("最新の警告をお読みします。")
+        case .openSettings:
+            // 設定画面を開く
+            speak("設定画面を開きます。")
+        case .callFamily:
+            // 家族に電話
+            speak("家族に電話します。")
+        }
     }
     
-    func analyzeWebsiteRisk(_ url: String) async throws -> WebsiteRiskAnalysis {
-        let prompt = createWebsiteRiskPrompt(url: url)
-        let response = try await callGeminiAPI(prompt: prompt)
-        return parseWebsiteRiskResponse(response)
+    private func speak(_ text: String) {
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+        utterance.rate = 0.5
+        utterance.pitchMultiplier = 1.0
+        utterance.volume = 0.8
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
     
-    // MARK: - Private Methods
+    // MARK: - AI Analysis
+    func analyzeCall(_ phoneNumber: String, callerName: String?) async -> RiskLevel {
+        // 実際のAI分析ロジックをここに実装
+        await Task.sleep(1_000_000_000) // 1秒待機
+        
+        // サンプルロジック
+        if phoneNumber.contains("090") || phoneNumber.contains("080") {
+            return .suspicious
+        } else if phoneNumber.contains("0120") || phoneNumber.contains("0800") {
+            return .safe
+        } else {
+            return .dangerous
+        }
+    }
     
-    private func callGeminiAPI(prompt: String) async throws -> String {
-        guard !apiKey.isEmpty else {
-            throw AIError.apiKeyNotConfigured
+    func analyzeEmail(_ sender: String, subject: String, content: String) async -> AlertSeverity {
+        // メール分析ロジック
+        await Task.sleep(500_000_000) // 0.5秒待機
+        
+        let suspiciousKeywords = ["銀行", "クレジットカード", "緊急", "確認", "更新", "停止"]
+        let contentLower = content.lowercased()
+        
+        let suspiciousCount = suspiciousKeywords.filter { contentLower.contains($0.lowercased()) }.count
+        
+        if suspiciousCount >= 3 {
+            return .high
+        } else if suspiciousCount >= 1 {
+            return .medium
+        } else {
+            return .low
+        }
+    }
+    
+    func analyzeWebsite(_ url: String) async -> WebSafetyCheck {
+        // ウェブサイト分析ロジック
+        await Task.sleep(800_000_000) // 0.8秒待機
+        
+        let suspiciousDomains = ["fake-bank.com", "scam-site.net", "phishing.org"]
+        let isSuspicious = suspiciousDomains.contains { url.contains($0) }
+        
+        return WebSafetyCheck(
+            url: url,
+            isSafe: !isSuspicious,
+            riskScore: isSuspicious ? 85 : 15,
+            threats: isSuspicious ? ["フィッシング", "マルウェア"] : [],
+            recommendations: isSuspicious ? ["このサイトにはアクセスしないでください"] : ["安全なサイトです"],
+            lastChecked: Date()
+        )
+    }
+    
+    // MARK: - Statistics Analysis
+    func generateSecurityReport(period: StatisticsPeriod) async -> SecurityStatistics {
+        // 統計レポート生成
+        await Task.sleep(1_200_000_000) // 1.2秒待機
+        
+        let trends = generateTrendData(period: period)
+        
+        return SecurityStatistics(
+            period: period,
+            totalAlerts: Int.random(in: 5...50),
+            blockedCalls: Int.random(in: 2...20),
+            safeEmails: Int.random(in: 10...100),
+            blockedWebsites: Int.random(in: 1...10),
+            educationCompleted: Int.random(in: 1...5),
+            protectionScore: Int.random(in: 70...95),
+            trends: trends
+        )
+    }
+    
+    private func generateTrendData(period: StatisticsPeriod) -> [StatisticsTrend] {
+        let calendar = Calendar.current
+        let now = Date()
+        var trends: [StatisticsTrend] = []
+        
+        let days: Int
+        switch period {
+        case .day: days = 1
+        case .week: days = 7
+        case .month: days = 30
+        case .year: days = 365
         }
         
-        let url = URL(string: "\(baseURL)?key=\(apiKey)")!
+        for i in 0..<days {
+            if let date = calendar.date(byAdding: .day, value: -i, to: now) {
+                trends.append(StatisticsTrend(
+                    id: UUID(),
+                    date: date,
+                    alerts: Int.random(in: 0...10),
+                    blockedCalls: Int.random(in: 0...5),
+                    protectionScore: Int.random(in: 70...95)
+                ))
+            }
+        }
+        
+        return trends.reversed()
+    }
+    
+    // MARK: - Offline Content Management
+    func downloadOfflineContent() async -> [OfflineContent] {
+        // オフラインコンテンツのダウンロード
+        await Task.sleep(2_000_000_000) // 2秒待機
+        
+        return [
+            OfflineContent(
+                id: UUID(),
+                title: "詐欺防止の基本",
+                content: "詐欺から身を守るための基本的な知識...",
+                category: .education,
+                lastUpdated: Date(),
+                isDownloaded: true,
+                fileSize: 1024 * 1024
+            ),
+            OfflineContent(
+                id: UUID(),
+                title: "緊急連絡先",
+                content: "警察: 110, 救急: 119...",
+                category: .emergency,
+                lastUpdated: Date(),
+                isDownloaded: true,
+                fileSize: 512 * 1024
+            )
+        ]
+    }
+    
+    // MARK: - AI Support Chat
+    func getAISupportResponse(_ question: String) async -> String {
+        // AIサポート応答生成
+        await Task.sleep(1_500_000_000) // 1.5秒待機
+        
+        let responses = [
+            "詐欺防止についてお答えします。まず、不審な電話やメールには注意が必要です。",
+            "セキュリティを強化するには、定期的にパスワードを変更し、二段階認証を有効にしてください。",
+            "家族との連携は重要です。緊急時にはすぐに連絡できるよう、事前に設定しておきましょう。",
+            "教育コンテンツを活用して、最新の詐欺手法について学ぶことをお勧めします。"
+        ]
+        
+        return responses.randomElement() ?? "申し訳ございませんが、その質問にはお答えできません。"
+    }
+}
+
+// MARK: - Network Service
+class NetworkService: ObservableObject {
+    private let baseURL = "https://your-vercel-app.vercel.app/api" // Replace with your actual Vercel URL
+    
+    func analyzeContent(type: String, content: String, userId: String, context: [String: Any]? = nil) async throws -> AIAnalysis {
+        let url = URL(string: "\(baseURL)/ai/gemini")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let requestBody = GeminiRequest(contents: [
-            GeminiContent(parts: [GeminiPart(text: prompt)])
-        ])
+        var body: [String: Any] = [
+            "type": type,
+            "content": content,
+            "userId": userId
+        ]
         
-        request.httpBody = try JSONEncoder().encode(requestBody)
+        if let context = context {
+            body["context"] = context
+        }
+        
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
         
         let (data, response) = try await URLSession.shared.data(for: request)
         
@@ -166,232 +429,363 @@ class GeminiAIService: AIServiceProtocol, ObservableObject {
             throw AIError.apiError
         }
         
-        let geminiResponse = try JSONDecoder().decode(GeminiResponse.self, from: data)
-        return geminiResponse.candidates.first?.content.parts.first?.text ?? ""
+        return try JSONDecoder().decode(AIAnalysis.self, from: data)
     }
     
-    // MARK: - Prompt Creation Methods
-    
-    private func createScamAnalysisPrompt(content: String, type: ScamType) -> String {
-        return """
-        あなたは詐欺検出の専門家です。以下の内容を分析して、詐欺の可能性を評価してください。
+    func getEmergencyStatus(userId: String) async throws -> EmergencyStatus {
+        let url = URL(string: "\(baseURL)/emergency/sos?userId=\(userId)&action=status")!
+        let request = URLRequest(url: url)
         
-        分析対象: \(type.displayName)
-        内容: \(content)
+        let (data, response) = try await URLSession.shared.data(for: request)
         
-        以下の形式でJSONで回答してください：
-        {
-            "isScam": true/false,
-            "confidence": 0.0-1.0,
-            "riskLevel": "safe/suspicious/dangerous/blocked",
-            "detectedThreats": ["脅威1", "脅威2"],
-            "recommendations": ["推奨アクション1", "推奨アクション2"],
-            "explanation": "分析結果の説明",
-            "aiReasoning": "AIの推論過程"
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw AIError.apiError
         }
         
-        高齢者向けに分かりやすく説明してください。
-        """
+        return try JSONDecoder().decode(EmergencyStatus.self, from: data)
     }
     
-    private func createRecommendationsPrompt(context: String) -> String {
-        return """
-        以下の状況に基づいて、高齢者向けの安全対策を3つ提案してください：
+    func triggerEmergency(userId: String, triggerMethod: String, location: LocationData?) async throws -> EmergencyResponse {
+        let url = URL(string: "\(baseURL)/emergency/sos")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        状況: \(context)
+        var body: [String: Any] = [
+            "action": "trigger",
+            "data": [
+                "triggerMethod": triggerMethod
+            ]
+        ]
         
-        以下の形式でJSONで回答してください：
-        {
-            "recommendations": ["対策1", "対策2", "対策3"]
+        if let location = location {
+            body["data"] = [
+                "triggerMethod": triggerMethod,
+                "location": [
+                    "latitude": location.latitude,
+                    "longitude": location.longitude
+                ]
+            ]
         }
         
-        具体的で実践的なアドバイスを提供してください。
-        """
-    }
-    
-    private func createQuestionAnswerPrompt(question: String) -> String {
-        return """
-        あなたは高齢者向けの詐欺防止アドバイザーです。以下の質問に分かりやすく回答してください：
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
         
-        質問: \(question)
+        let (data, response) = try await URLSession.shared.data(for: request)
         
-        以下の点に注意して回答してください：
-        1. 高齢者にも分かりやすい言葉で説明
-        2. 具体的な例を交えて説明
-        3. 実践的なアドバイスを提供
-        4. 不安を煽らないよう配慮
-        """
-    }
-    
-    private func createEducationalContentPrompt(topic: String) -> String {
-        return """
-        高齢者向けの詐欺防止教育コンテンツを作成してください。
-        
-        トピック: \(topic)
-        
-        以下の形式でJSONで回答してください：
-        {
-            "title": "タイトル",
-            "content": "詳細な内容",
-            "difficulty": "beginner/intermediate/advanced",
-            "estimatedTime": 300,
-            "keyPoints": ["ポイント1", "ポイント2", "ポイント3"],
-            "examples": ["例1", "例2"]
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw AIError.apiError
         }
         
-        高齢者に分かりやすく、実践的な内容にしてください。
-        """
+        return try JSONDecoder().decode(EmergencyResponse.self, from: data)
     }
     
-    private func createCallRiskPrompt(phoneNumber: String, context: String?) -> String {
-        let contextText = context ?? "情報なし"
-        return """
-        以下の電話番号のリスクを分析してください：
+    func getFamilyMembers(userId: String) async throws -> [FamilyMember] {
+        let url = URL(string: "\(baseURL)/family/connection?userId=\(userId)&action=members")!
+        let request = URLRequest(url: url)
         
-        電話番号: \(phoneNumber)
-        状況: \(contextText)
+        let (data, response) = try await URLSession.shared.data(for: request)
         
-        以下の形式でJSONで回答してください：
-        {
-            "riskLevel": "safe/suspicious/dangerous/blocked",
-            "confidence": 0.0-1.0,
-            "detectedThreats": ["脅威1", "脅威2"],
-            "recommendations": ["推奨アクション1", "推奨アクション2"],
-            "callerInfo": "発信者情報の分析",
-            "isKnownScammer": true/false
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw AIError.apiError
         }
-        """
+        
+        let familyResponse = try JSONDecoder().decode(FamilyResponse.self, from: data)
+        return familyResponse.members
     }
     
-    private func createEmailRiskPrompt(emailContent: String) -> String {
-        return """
-        以下のメール内容のリスクを分析してください：
+    func updateLocation(userId: String, latitude: Double, longitude: Double, accuracy: Double = 10) async throws -> LocationData {
+        let url = URL(string: "\(baseURL)/family/connection")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        メール内容: \(emailContent)
+        let body: [String: Any] = [
+            "action": "update-location",
+            "data": [
+                "latitude": latitude,
+                "longitude": longitude,
+                "accuracy": accuracy
+            ]
+        ]
         
-        以下の形式でJSONで回答してください：
-        {
-            "riskLevel": "safe/suspicious/dangerous/blocked",
-            "confidence": 0.0-1.0,
-            "detectedThreats": ["脅威1", "脅威2"],
-            "recommendations": ["推奨アクション1", "推奨アクション2"],
-            "senderAnalysis": "送信者分析",
-            "contentAnalysis": "内容分析",
-            "isPhishing": true/false
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw AIError.apiError
         }
-        """
+        
+        let locationResponse = try JSONDecoder().decode(LocationResponse.self, from: data)
+        return locationResponse.location
     }
     
-    private func createWebsiteRiskPrompt(url: String) -> String {
-        return """
-        以下のウェブサイトのリスクを分析してください：
+    func getStatistics(userId: String, period: String = "week") async throws -> StatisticsOverview {
+        let url = URL(string: "\(baseURL)/statistics/reports?userId=\(userId)&action=overview&period=\(period)")!
+        let request = URLRequest(url: url)
         
-        URL: \(url)
+        let (data, response) = try await URLSession.shared.data(for: request)
         
-        以下の形式でJSONで回答してください：
-        {
-            "riskLevel": "safe/suspicious/dangerous/blocked",
-            "confidence": 0.0-1.0,
-            "detectedThreats": ["脅威1", "脅威2"],
-            "recommendations": ["推奨アクション1", "推奨アクション2"],
-            "domainAnalysis": "ドメイン分析",
-            "contentAnalysis": "内容分析",
-            "isSafe": true/false
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw AIError.apiError
         }
-        """
+        
+        return try JSONDecoder().decode(StatisticsOverview.self, from: data)
     }
     
-    // MARK: - Response Parsing Methods
+    func logSecurityEvent(userId: String, type: String, severity: String, description: String) async throws -> SecurityEvent {
+        let url = URL(string: "\(baseURL)/statistics/reports")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let body: [String: Any] = [
+            "action": "log-event",
+            "data": [
+                "type": type,
+                "severity": severity,
+                "description": description
+            ]
+        ]
+        
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 201 else {
+            throw AIError.apiError
+        }
+        
+        let eventResponse = try JSONDecoder().decode(EventResponse.self, from: data)
+        return eventResponse.event
+    }
+}
+
+// MARK: - Response Models
+struct AIAnalysis: Codable {
+    let type: String
+    let content: String
+    let analysis: String
+    let timestamp: String
+    let userId: String
+    let riskLevel: String
+    let recommendations: [String]
+}
+
+struct EmergencyStatus: Codable {
+    let isEnabled: Bool
+    let hasActiveEmergency: Bool
+    let lastTriggered: String?
+}
+
+struct EmergencyResponse: Codable {
+    let emergency: EmergencyData
+    let actions: [EmergencyAction]
+    let message: String
+}
+
+struct EmergencyData: Codable {
+    let id: String
+    let userId: String
+    let triggerMethod: String
+    let location: LocationData?
+    let timestamp: String
+    let status: String
+}
+
+struct EmergencyAction: Codable {
+    let type: String
+    let target: String?
+    let status: String
+    let timestamp: String
+}
+
+struct LocationData: Codable {
+    let latitude: Double
+    let longitude: Double
+    let timestamp: String
+    let accuracy: Double
+}
+
+struct FamilyResponse: Codable {
+    let members: [FamilyMember]
+}
+
+struct LocationResponse: Codable {
+    let location: LocationData
+}
+
+struct StatisticsOverview: Codable {
+    let period: String
+    let protectionScore: Int
+    let totalEvents: Int
+    let highRiskEvents: Int
+    let resolvedEvents: Int
+    let trend: String
+    let lastUpdated: String
+}
+
+struct SecurityEvent: Codable {
+    let id: String
+    let userId: String
+    let type: String
+    let severity: String
+    let description: String
+    let timestamp: String
+    let resolved: Bool
+    let aiAnalysis: String?
+}
+
+struct EventResponse: Codable {
+    let event: SecurityEvent
+}
+
+// MARK: - Gemini AI Service
+class GeminiAIService: AIServiceProtocol, ObservableObject {
+    private let networkService = NetworkService()
     
-    private func parseScamAnalysisResponse(_ response: String, type: ScamType) -> ScamAnalysisResult {
-        // JSONパースの実装
-        // 実際の実装では適切なJSONパーサーを使用
+    init() {
+        // Network service is initialized automatically
+    }
+    
+    // MARK: - Main AI Methods
+    
+    func analyzeScamContent(_ content: String, type: ScamType) async throws -> ScamAnalysisResult {
+        let analysisType: String
+        switch type {
+        case .phone: analysisType = "call_analysis"
+        case .email: analysisType = "email_analysis"
+        case .website: analysisType = "website_analysis"
+        case .sms: analysisType = "call_analysis"
+        case .socialMedia: analysisType = "general_advice"
+        }
+        
+        let aiAnalysis = try await networkService.analyzeContent(
+            type: analysisType,
+            content: content,
+            userId: "user_\(UUID().uuidString)"
+        )
+        
         return ScamAnalysisResult(
-            isScam: response.contains("true"),
+            isScam: aiAnalysis.riskLevel == "high",
             confidence: 0.8,
-            riskLevel: .suspicious,
-            detectedThreats: ["フィッシング", "個人情報要求"],
-            recommendations: ["リンクをクリックしない", "情報を入力しない"],
-            explanation: "AI分析による詐欺の可能性が検出されました",
-            aiReasoning: response
+            riskLevel: parseRiskLevel(aiAnalysis.riskLevel),
+            detectedThreats: aiAnalysis.recommendations,
+            recommendations: aiAnalysis.recommendations,
+            explanation: aiAnalysis.analysis,
+            aiReasoning: aiAnalysis.analysis
         )
     }
     
-    private func parseRecommendationsResponse(_ response: String) -> [String] {
-        return ["推奨アクション1", "推奨アクション2", "推奨アクション3"]
+    func generateSafetyRecommendations(_ context: String) async throws -> [String] {
+        let aiAnalysis = try await networkService.analyzeContent(
+            type: "general_advice",
+            content: context,
+            userId: "user_\(UUID().uuidString)"
+        )
+        return aiAnalysis.recommendations
     }
     
-    private func parseQuestionAnswerResponse(_ response: String) -> String {
-        return response
+    func answerUserQuestion(_ question: String) async throws -> String {
+        let aiAnalysis = try await networkService.analyzeContent(
+            type: "general_advice",
+            content: question,
+            userId: "user_\(UUID().uuidString)"
+        )
+        return aiAnalysis.analysis
     }
     
-    private func parseEducationalContentResponse(_ response: String, topic: String) -> EducationalContent {
+    func generateEducationalContent(_ topic: String) async throws -> EducationalContent {
+        let aiAnalysis = try await networkService.analyzeContent(
+            type: "general_advice",
+            content: topic,
+            userId: "user_\(UUID().uuidString)"
+        )
+        
         return EducationalContent(
-            title: "\(topic)について",
-            content: response,
+            title: topic,
+            content: aiAnalysis.analysis,
             difficulty: .beginner,
             estimatedTime: 300,
-            keyPoints: ["ポイント1", "ポイント2", "ポイント3"],
-            examples: ["例1", "例2"]
+            keyPoints: aiAnalysis.recommendations,
+            examples: []
         )
     }
     
-    private func parseCallRiskResponse(_ response: String) -> CallRiskAnalysis {
+    func analyzeCallRisk(_ phoneNumber: String, context: String?) async throws -> CallRiskAnalysis {
+        let aiAnalysis = try await networkService.analyzeContent(
+            type: "call_analysis",
+            content: "Phone number: \(phoneNumber). Context: \(context ?? "No context")",
+            userId: "user_\(UUID().uuidString)"
+        )
+        
         return CallRiskAnalysis(
-            riskLevel: .suspicious,
+            riskLevel: parseRiskLevel(aiAnalysis.riskLevel),
             confidence: 0.7,
-            detectedThreats: ["不明な発信者"],
-            recommendations: ["着信を拒否", "番号をブロック"],
-            callerInfo: "不明な番号",
-            isKnownScammer: false
+            detectedThreats: aiAnalysis.recommendations,
+            recommendations: aiAnalysis.recommendations,
+            callerInfo: aiAnalysis.analysis,
+            isKnownScammer: aiAnalysis.riskLevel == "high"
         )
     }
     
-    private func parseEmailRiskResponse(_ response: String) -> EmailRiskAnalysis {
+    func analyzeEmailRisk(_ emailContent: String) async throws -> EmailRiskAnalysis {
+        let aiAnalysis = try await networkService.analyzeContent(
+            type: "email_analysis",
+            content: emailContent,
+            userId: "user_\(UUID().uuidString)"
+        )
+        
         return EmailRiskAnalysis(
-            riskLevel: .dangerous,
-            confidence: 0.9,
-            detectedThreats: ["フィッシング", "偽のリンク"],
-            recommendations: ["メールを削除", "リンクをクリックしない"],
-            senderAnalysis: "不審な送信者",
-            contentAnalysis: "緊急性を演出",
-            isPhishing: true
+            riskLevel: parseRiskLevel(aiAnalysis.riskLevel),
+            confidence: 0.8,
+            detectedThreats: aiAnalysis.recommendations,
+            recommendations: aiAnalysis.recommendations,
+            senderAnalysis: aiAnalysis.analysis,
+            contentAnalysis: aiAnalysis.analysis,
+            isPhishing: aiAnalysis.riskLevel == "high"
         )
     }
     
-    private func parseWebsiteRiskResponse(_ response: String) -> WebsiteRiskAnalysis {
+    func analyzeWebsiteRisk(_ url: String) async throws -> WebsiteRiskAnalysis {
+        let aiAnalysis = try await networkService.analyzeContent(
+            type: "website_analysis",
+            content: url,
+            userId: "user_\(UUID().uuidString)"
+        )
+        
         return WebsiteRiskAnalysis(
-            riskLevel: .dangerous,
+            riskLevel: parseRiskLevel(aiAnalysis.riskLevel),
             confidence: 0.8,
-            detectedThreats: ["マルウェア", "フィッシング"],
-            recommendations: ["アクセスを避ける", "セキュリティソフトでスキャン"],
-            domainAnalysis: "不審なドメイン",
-            contentAnalysis: "危険なコンテンツ",
-            isSafe: false
+            detectedThreats: aiAnalysis.recommendations,
+            recommendations: aiAnalysis.recommendations,
+            domainAnalysis: aiAnalysis.analysis,
+            contentAnalysis: aiAnalysis.analysis,
+            isSafe: aiAnalysis.riskLevel == "low"
         )
     }
+    
+    private func parseRiskLevel(_ riskLevel: String) -> RiskLevel {
+        switch riskLevel {
+        case "high": return .dangerous
+        case "medium": return .suspicious
+        case "low": return .safe
+        default: return .suspicious
+        }
+    }
+    
+
+    
+
 }
 
-// MARK: - Gemini API Models
-struct GeminiRequest: Codable {
-    let contents: [GeminiContent]
-}
 
-struct GeminiContent: Codable {
-    let parts: [GeminiPart]
-}
-
-struct GeminiPart: Codable {
-    let text: String
-}
-
-struct GeminiResponse: Codable {
-    let candidates: [GeminiCandidate]
-}
-
-struct GeminiCandidate: Codable {
-    let content: GeminiContent
-}
 
 // MARK: - AI Errors
 enum AIError: Error, LocalizedError {

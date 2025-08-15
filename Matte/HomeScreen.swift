@@ -27,6 +27,12 @@ struct HomeScreen: View {
                     // クイックアクション
                     QuickActionsView()
                     
+                    // 緊急アクセス
+                    EmergencyAccessCard()
+                    
+                    // 家族連携
+                    FamilyConnectionCard()
+                    
                     // AI機能カード
                     AIFeaturesCard()
                     
@@ -276,6 +282,154 @@ struct QuickActionButton: View {
             .cornerRadius(10)
         }
         .buttonStyle(PlainButtonStyle())
+    }
+}
+
+struct EmergencyAccessCard: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            HStack {
+                Image(systemName: "sos")
+                    .foregroundColor(.red)
+                Text("緊急アクセス")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            
+            VStack(spacing: 12) {
+                EmergencyAccessRow(
+                    title: "緊急SOS",
+                    description: "緊急時に素早く家族に連絡",
+                    icon: "phone.circle.fill",
+                    color: .red
+                )
+                
+                EmergencyAccessRow(
+                    title: "音声アシスタント",
+                    description: "音声でアプリを操作",
+                    icon: "mic.fill",
+                    color: .blue
+                )
+                
+                EmergencyAccessRow(
+                    title: "位置情報共有",
+                    description: "現在地を家族に共有",
+                    icon: "location.fill",
+                    color: .green
+                )
+            }
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(15)
+        .shadow(radius: 2)
+    }
+}
+
+struct EmergencyAccessRow: View {
+    let title: String
+    let description: String
+    let icon: String
+    let color: Color
+    
+    var body: some View {
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(color)
+                .frame(width: 25)
+            
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                
+                Text(description)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            
+            Spacer()
+            
+            Image(systemName: "chevron.right")
+                .foregroundColor(.secondary)
+                .font(.caption)
+        }
+        .padding(.vertical, 5)
+    }
+}
+
+struct FamilyConnectionCard: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            HStack {
+                Image(systemName: "person.3.fill")
+                    .foregroundColor(.purple)
+                Text("家族連携")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            
+            VStack(spacing: 12) {
+                FamilyConnectionRow(
+                    title: "家族メンバー",
+                    description: "登録済み: 3人",
+                    icon: "person.2.fill",
+                    color: .blue
+                )
+                
+                FamilyConnectionRow(
+                    title: "活動状況",
+                    description: "2人がオンライン",
+                    icon: "wifi",
+                    color: .green
+                )
+                
+                FamilyConnectionRow(
+                    title: "緊急連絡",
+                    description: "保護者に素早く連絡",
+                    icon: "phone.circle.fill",
+                    color: .orange
+                )
+            }
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(15)
+        .shadow(radius: 2)
+    }
+}
+
+struct FamilyConnectionRow: View {
+    let title: String
+    let description: String
+    let icon: String
+    let color: Color
+    
+    var body: some View {
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(color)
+                .frame(width: 25)
+            
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                
+                Text(description)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            
+            Spacer()
+            
+            Image(systemName: "chevron.right")
+                .foregroundColor(.secondary)
+                .font(.caption)
+        }
+        .padding(.vertical, 5)
     }
 }
 

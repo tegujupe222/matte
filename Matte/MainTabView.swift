@@ -13,43 +13,37 @@ struct MainTabView: View {
             HomeScreen()
                 .tabItem {
                     Image(systemName: "house.fill")
-                    Text("Matte")
+                    Text("ホーム")
                 }
             
-            CallScreeningScreen()
+            EmergencySOSScreen()
                 .tabItem {
-                    Image(systemName: "phone.fill")
-                    Text("Matte")
+                    Image(systemName: "sos")
+                    Text("緊急SOS")
                 }
             
-            EmailAlertScreen()
+            FamilyConnectionScreen()
                 .tabItem {
-                    Image(systemName: "envelope.fill")
-                    Text("Matte")
+                    Image(systemName: "person.3.fill")
+                    Text("家族連携")
                 }
             
-            WebSafetyScreen()
+            VoiceAssistantScreen()
                 .tabItem {
-                    Image(systemName: "globe")
-                    Text("Matte")
+                    Image(systemName: "mic.fill")
+                    Text("音声")
                 }
             
-            AISupportScreen()
+            StatisticsScreen()
                 .tabItem {
-                    Image(systemName: "brain.head.profile")
-                    Text("Matte")
-                }
-            
-            AIAnalysisScreen()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Matte")
+                    Image(systemName: "chart.bar.fill")
+                    Text("統計")
                 }
             
             SettingsScreen()
                 .tabItem {
                     Image(systemName: "gearshape.fill")
-                    Text("Matte")
+                    Text("設定")
                 }
         }
         .accentColor(.red) // 警告色として赤を使用
