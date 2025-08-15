@@ -405,7 +405,7 @@ class NetworkService: ObservableObject {
     private let baseURL = "https://your-vercel-app.vercel.app/api" // Replace with your actual Vercel URL
     
     func analyzeContent(type: String, content: String, userId: String, context: [String: Any]? = nil) async throws -> AIAnalysis {
-        let url = URL(string: "\(baseURL)/ai/gemini")!
+        let url = URL(string: "\(baseURL)/gemini")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -433,7 +433,7 @@ class NetworkService: ObservableObject {
     }
     
     func getEmergencyStatus(userId: String) async throws -> EmergencyStatus {
-        let url = URL(string: "\(baseURL)/emergency/sos?userId=\(userId)&action=status")!
+        let url = URL(string: "\(baseURL)/sos?userId=\(userId)&action=status")!
         let request = URLRequest(url: url)
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -447,7 +447,7 @@ class NetworkService: ObservableObject {
     }
     
     func triggerEmergency(userId: String, triggerMethod: String, location: LocationData?) async throws -> EmergencyResponse {
-        let url = URL(string: "\(baseURL)/emergency/sos")!
+        let url = URL(string: "\(baseURL)/sos")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -482,7 +482,7 @@ class NetworkService: ObservableObject {
     }
     
     func getFamilyMembers(userId: String) async throws -> [FamilyMember] {
-        let url = URL(string: "\(baseURL)/family/connection?userId=\(userId)&action=members")!
+        let url = URL(string: "\(baseURL)/family?userId=\(userId)&action=members")!
         let request = URLRequest(url: url)
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -497,7 +497,7 @@ class NetworkService: ObservableObject {
     }
     
     func updateLocation(userId: String, latitude: Double, longitude: Double, accuracy: Double = 10) async throws -> LocationData {
-        let url = URL(string: "\(baseURL)/family/connection")!
+        let url = URL(string: "\(baseURL)/family")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -525,7 +525,7 @@ class NetworkService: ObservableObject {
     }
     
     func getStatistics(userId: String, period: String = "week") async throws -> StatisticsOverview {
-        let url = URL(string: "\(baseURL)/statistics/reports?userId=\(userId)&action=overview&period=\(period)")!
+        let url = URL(string: "\(baseURL)/statistics?userId=\(userId)&action=overview&period=\(period)")!
         let request = URLRequest(url: url)
         
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -539,7 +539,7 @@ class NetworkService: ObservableObject {
     }
     
     func logSecurityEvent(userId: String, type: String, severity: String, description: String) async throws -> SecurityEvent {
-        let url = URL(string: "\(baseURL)/statistics/reports")!
+        let url = URL(string: "\(baseURL)/statistics")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
