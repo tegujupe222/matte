@@ -439,16 +439,22 @@ struct EmergencyContactCard: View {
     private func contactAllMembers() {
         // 全員連絡機能
         print("全家族に連絡")
+        // 実際の実装では、登録された全家族メンバーに通知を送信
+        // 例: プッシュ通知、SMS、メールなど
     }
     
     private func contactGuardians() {
         // 保護者連絡機能
         print("保護者に連絡")
+        // 実際の実装では、保護者設定の家族メンバーに通知を送信
+        // 例: 緊急連絡先への自動通話やメッセージ送信
     }
     
     private func shareLocation() {
         // 位置情報共有機能
         print("位置情報を共有")
+        // 実際の実装では、現在地を家族メンバーに共有
+        // 例: GPS位置情報を取得して家族アプリに送信
     }
 }
 

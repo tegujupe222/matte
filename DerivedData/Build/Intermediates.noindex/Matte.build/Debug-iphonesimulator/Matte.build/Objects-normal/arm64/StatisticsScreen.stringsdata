@@ -1,0 +1,128 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/StatisticsScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "統計・レポート",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "統計を読み込み中...",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "期間選択",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護スコア",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 204
+        }
+      },
+      {
+        "comment": "",
+        "key": "点",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 208
+        }
+      },
+      {
+        "comment": "",
+        "key": "統計サマリー",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 252
+        }
+      },
+      {
+        "comment": "",
+        "key": "トレンド分析",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 331
+        }
+      },
+      {
+        "comment": "",
+        "key": "警告: %lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 346
+        }
+      },
+      {
+        "comment": "",
+        "key": "スコア: %lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 350
+        }
+      },
+      {
+        "comment": "",
+        "key": "詳細統計",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 376
+        }
+      },
+      {
+        "comment": "",
+        "key": "達成度",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 445
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/%lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 450
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 494
+        }
+      },
+      {
+        "comment": "",
+        "key": "推奨事項",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 516
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,144 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/CallScreeningScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "通話スクリーニング",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "通話スクリーニング有効",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 106
+        }
+      },
+      {
+        "comment": "",
+        "key": "通話スクリーニング無効",
+        "location": {
+          "startingColumn": 76,
+          "startingLine": 106
+        }
+      },
+      {
+        "comment": "",
+        "key": "危険な通話を自動的にブロックします",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "設定で有効にしてください",
+        "location": {
+          "startingColumn": 94,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "通話履歴がありません",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 143
+        }
+      },
+      {
+        "comment": "",
+        "key": "最近の通話",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "ブラックリストに登録された番号はありません",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 222
+        }
+      },
+      {
+        "comment": "",
+        "key": "ブラックリスト",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 209
+        }
+      },
+      {
+        "comment": "",
+        "key": "追加",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 214
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 235
+        }
+      },
+      {
+        "comment": "",
+        "key": "統計情報",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 272
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 340
+        }
+      },
+      {
+        "comment": "",
+        "key": "ブラックリストに追加",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 322
+        }
+      },
+      {
+        "comment": "",
+        "key": "電話番号を入力",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 326
+        }
+      },
+      {
+        "comment": "",
+        "key": "追加",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 330
+        }
+      }
+    ]
+  },
+  "version": 1
+}

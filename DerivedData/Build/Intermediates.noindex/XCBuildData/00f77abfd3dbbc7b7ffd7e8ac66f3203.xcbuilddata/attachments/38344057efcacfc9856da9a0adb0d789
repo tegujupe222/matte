@@ -1,0 +1,168 @@
+{
+  "" : {
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Matte-master.dia",
+    "emit-module-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Matte-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Matte-master-emit-module.dia",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Matte-master.swiftdeps"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/AIAnalysisScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIAnalysisScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIAnalysisScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIAnalysisScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIAnalysisScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIAnalysisScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIAnalysisScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIAnalysisScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIAnalysisScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/AIService.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIService.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIService.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIService.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIService.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIService.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIService.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIService.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AIService~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/AISupportScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AISupportScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AISupportScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AISupportScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AISupportScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AISupportScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AISupportScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AISupportScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/AISupportScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/CallScreeningScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/CallScreeningScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/CallScreeningScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/CallScreeningScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/CallScreeningScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/CallScreeningScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/CallScreeningScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/CallScreeningScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/CallScreeningScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/EmailAlertScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmailAlertScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmailAlertScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmailAlertScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmailAlertScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmailAlertScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmailAlertScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmailAlertScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmailAlertScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/EmergencySOSScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmergencySOSScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmergencySOSScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmergencySOSScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmergencySOSScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmergencySOSScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmergencySOSScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmergencySOSScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/EmergencySOSScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/FamilyConnectionScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/FamilyConnectionScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/FamilyConnectionScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/FamilyConnectionScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/FamilyConnectionScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/FamilyConnectionScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/FamilyConnectionScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/FamilyConnectionScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/FamilyConnectionScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/HomeScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/HomeScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/HomeScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/HomeScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/HomeScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/HomeScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/HomeScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/HomeScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/HomeScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/MainTabView.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MainTabView.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MainTabView.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MainTabView.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MainTabView.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MainTabView.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MainTabView.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MainTabView.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MainTabView~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/MatteApp.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MatteApp.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MatteApp.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MatteApp.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MatteApp.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MatteApp.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MatteApp.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MatteApp.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/MatteApp~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/Models.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Models.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Models.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Models.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Models.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Models.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Models.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Models.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/Models~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/SettingsScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/SettingsScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/SettingsScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/SettingsScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/SettingsScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/SettingsScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/SettingsScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/SettingsScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/SettingsScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/StatisticsScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/StatisticsScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/StatisticsScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/StatisticsScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/StatisticsScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/StatisticsScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/StatisticsScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/StatisticsScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/StatisticsScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/VoiceAssistantScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/VoiceAssistantScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/VoiceAssistantScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/VoiceAssistantScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/VoiceAssistantScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/VoiceAssistantScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/VoiceAssistantScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/VoiceAssistantScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/VoiceAssistantScreen~partial.swiftmodule"
+  },
+  "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/WebSafetyScreen.swift" : {
+    "const-values" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/WebSafetyScreen.swiftconstvalues",
+    "dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/WebSafetyScreen.d",
+    "diagnostics" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/WebSafetyScreen.dia",
+    "index-unit-output-path" : "/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/WebSafetyScreen.o",
+    "llvm-bc" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/WebSafetyScreen.bc",
+    "object" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/WebSafetyScreen.o",
+    "swift-dependencies" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/WebSafetyScreen.swiftdeps",
+    "swiftmodule" : "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/DerivedData/Build/Intermediates.noindex/Matte.build/Debug-iphonesimulator/Matte.build/Objects-normal/arm64/WebSafetyScreen~partial.swiftmodule"
+  }
+}

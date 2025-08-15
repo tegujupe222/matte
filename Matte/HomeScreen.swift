@@ -116,11 +116,11 @@ struct RecentAlertsCard: View {
             }
             
             if alerts.count > 3 {
-                Button("すべて表示") {
-                    // 詳細画面へ遷移
+                NavigationLink(destination: Text("警告履歴画面")) {
+                    Text("すべて表示")
+                        .font(.subheadline)
+                        .foregroundColor(.blue)
                 }
-                .font(.subheadline)
-                .foregroundColor(.blue)
             }
         }
         .padding()
@@ -167,20 +167,28 @@ struct QuickActionsView: View {
                 .fontWeight(.bold)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 15) {
-                QuickActionButton(title: "ブラックリスト", icon: "person.crop.circle.badge.minus", color: .red) {
-                    // ブラックリスト画面へ
+                NavigationLink(destination: Text("ブラックリスト画面")) {
+                    QuickActionButton(title: "ブラックリスト", icon: "person.crop.circle.badge.minus", color: .red) {
+                        // NavigationLinkで処理される
+                    }
                 }
                 
-                QuickActionButton(title: "緊急連絡先", icon: "phone.circle.fill", color: .green) {
-                    // 緊急連絡先画面へ
+                NavigationLink(destination: Text("緊急連絡先画面")) {
+                    QuickActionButton(title: "緊急連絡先", icon: "phone.circle.fill", color: .green) {
+                        // NavigationLinkで処理される
+                    }
                 }
                 
-                QuickActionButton(title: "安全チェック", icon: "checkmark.shield.fill", color: .blue) {
-                    // 安全チェック画面へ
+                NavigationLink(destination: Text("安全チェック画面")) {
+                    QuickActionButton(title: "安全チェック", icon: "checkmark.shield.fill", color: .blue) {
+                        // NavigationLinkで処理される
+                    }
                 }
                 
-                QuickActionButton(title: "教育コンテンツ", icon: "book.fill", color: .purple) {
-                    // 教育コンテンツ画面へ
+                NavigationLink(destination: Text("教育コンテンツ画面")) {
+                    QuickActionButton(title: "教育コンテンツ", icon: "book.fill", color: .purple) {
+                        // NavigationLinkで処理される
+                    }
                 }
             }
         }
@@ -204,19 +212,23 @@ struct AIFeaturesCard: View {
             }
             
             VStack(spacing: 15) {
-                AIFeatureRow(
-                    title: "AIサポート",
-                    description: "詐欺防止について質問できます",
-                    icon: "message.fill",
-                    color: .blue
-                )
+                NavigationLink(destination: AISupportScreen()) {
+                    AIFeatureRow(
+                        title: "AIサポート",
+                        description: "詐欺防止について質問できます",
+                        icon: "message.fill",
+                        color: .blue
+                    )
+                }
                 
-                AIFeatureRow(
-                    title: "AI分析",
-                    description: "通話・メール・ウェブサイトを分析",
-                    icon: "magnifyingglass",
-                    color: .green
-                )
+                NavigationLink(destination: AIAnalysisScreen()) {
+                    AIFeatureRow(
+                        title: "AI分析",
+                        description: "通話・メール・ウェブサイトを分析",
+                        icon: "magnifyingglass",
+                        color: .green
+                    )
+                }
             }
         }
         .padding()
@@ -298,26 +310,32 @@ struct EmergencyAccessCard: View {
             }
             
             VStack(spacing: 12) {
-                EmergencyAccessRow(
-                    title: "緊急SOS",
-                    description: "緊急時に素早く家族に連絡",
-                    icon: "phone.circle.fill",
-                    color: .red
-                )
+                NavigationLink(destination: CallScreeningScreen()) {
+                    EmergencyAccessRow(
+                        title: "緊急SOS",
+                        description: "緊急時に素早く家族に連絡",
+                        icon: "phone.circle.fill",
+                        color: .red
+                    )
+                }
                 
-                EmergencyAccessRow(
-                    title: "音声アシスタント",
-                    description: "音声でアプリを操作",
-                    icon: "mic.fill",
-                    color: .blue
-                )
+                NavigationLink(destination: Text("音声アシスタント画面")) {
+                    EmergencyAccessRow(
+                        title: "音声アシスタント",
+                        description: "音声でアプリを操作",
+                        icon: "mic.fill",
+                        color: .blue
+                    )
+                }
                 
-                EmergencyAccessRow(
-                    title: "位置情報共有",
-                    description: "現在地を家族に共有",
-                    icon: "location.fill",
-                    color: .green
-                )
+                NavigationLink(destination: Text("位置情報共有画面")) {
+                    EmergencyAccessRow(
+                        title: "位置情報共有",
+                        description: "現在地を家族に共有",
+                        icon: "location.fill",
+                        color: .green
+                    )
+                }
             }
         }
         .padding()
@@ -372,26 +390,32 @@ struct FamilyConnectionCard: View {
             }
             
             VStack(spacing: 12) {
-                FamilyConnectionRow(
-                    title: "家族メンバー",
-                    description: "登録済み: 3人",
-                    icon: "person.2.fill",
-                    color: .blue
-                )
+                NavigationLink(destination: Text("家族メンバー画面")) {
+                    FamilyConnectionRow(
+                        title: "家族メンバー",
+                        description: "登録済み: 3人",
+                        icon: "person.2.fill",
+                        color: .blue
+                    )
+                }
                 
-                FamilyConnectionRow(
-                    title: "活動状況",
-                    description: "2人がオンライン",
-                    icon: "wifi",
-                    color: .green
-                )
+                NavigationLink(destination: Text("活動状況画面")) {
+                    FamilyConnectionRow(
+                        title: "活動状況",
+                        description: "2人がオンライン",
+                        icon: "wifi",
+                        color: .green
+                    )
+                }
                 
-                FamilyConnectionRow(
-                    title: "緊急連絡",
-                    description: "保護者に素早く連絡",
-                    icon: "phone.circle.fill",
-                    color: .orange
-                )
+                NavigationLink(destination: Text("緊急連絡画面")) {
+                    FamilyConnectionRow(
+                        title: "緊急連絡",
+                        description: "保護者に素早く連絡",
+                        icon: "phone.circle.fill",
+                        color: .orange
+                    )
+                }
             }
         }
         .padding()
@@ -452,11 +476,11 @@ struct EducationCard: View {
                 .font(.subheadline)
                 .foregroundColor(.secondary)
             
-            Button("詳しく学ぶ") {
-                // 教育コンテンツ詳細へ
+            NavigationLink(destination: Text("教育コンテンツ詳細画面")) {
+                Text("詳しく学ぶ")
+                    .font(.subheadline)
+                    .foregroundColor(.blue)
             }
-            .font(.subheadline)
-            .foregroundColor(.blue)
         }
         .padding()
         .background(Color(.systemBackground))

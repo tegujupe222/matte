@@ -402,7 +402,7 @@ class AIService: ObservableObject {
 
 // MARK: - Network Service
 class NetworkService: ObservableObject {
-    private let baseURL = "https://your-vercel-app.vercel.app/api" // Replace with your actual Vercel URL
+    private let baseURL = "https://matte-dun.vercel.app/api" // 実際のVercel URL
     
     func analyzeContent(type: String, content: String, userId: String, context: [String: Any]? = nil) async throws -> AIAnalysis {
         let url = URL(string: "\(baseURL)/gemini")!

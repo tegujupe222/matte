@@ -1,0 +1,40 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/AISupportScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "AIサポート",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 80
+        }
+      },
+      {
+        "comment": "",
+        "key": "質問を入力してください...",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 85
+        }
+      }
+    ]
+  },
+  "version": 1
+}

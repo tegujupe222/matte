@@ -1,0 +1,344 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/VoiceAssistantScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "音声アシスタント",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "設定",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 56
+        }
+      },
+      {
+        "comment": "",
+        "key": "「セキュリティチェック」や「緊急通話」などと言ってみてください",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 191
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声を聞いています...",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "タップして話してください",
+        "location": {
+          "startingColumn": 71,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "認識された内容:",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 177
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声コマンド",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 305
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声アシスタントを有効にする",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 312
+        }
+      },
+      {
+        "comment": "",
+        "key": "振動フィードバック",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 315
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声速度",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 320
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 323
+        }
+      },
+      {
+        "comment": "",
+        "key": "音量",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 334
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 337
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声テスト",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 363
+        }
+      },
+      {
+        "comment": "",
+        "key": "テスト用のテキスト",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 370
+        }
+      },
+      {
+        "comment": "",
+        "key": "停止",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 377
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声テスト",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 377
+        }
+      },
+      {
+        "comment": "",
+        "key": "ヘルプ・ヒント",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 424
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声設定",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 546
+        }
+      },
+      {
+        "comment": "",
+        "key": "基本設定",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 503
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声設定",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 508
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声認識設定",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 536
+        }
+      },
+      {
+        "comment": "",
+        "key": "アクセシビリティ",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 541
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声アシスタント",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 504
+        }
+      },
+      {
+        "comment": "",
+        "key": "振動フィードバック",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 505
+        }
+      },
+      {
+        "comment": "",
+        "key": "言語",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 509
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声速度",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 517
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 519
+        }
+      },
+      {
+        "comment": "",
+        "key": "音量",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 527
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 529
+        }
+      },
+      {
+        "comment": "",
+        "key": "自動音声認識",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 537
+        }
+      },
+      {
+        "comment": "",
+        "key": "部分認識結果表示",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 538
+        }
+      },
+      {
+        "comment": "",
+        "key": "大きな文字",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 542
+        }
+      },
+      {
+        "comment": "",
+        "key": "高コントラスト",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 543
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 550
+        }
+      },
+      {
+        "comment": "",
+        "key": "コマンドヘルプ",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 618
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声コマンドヘルプ",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 579
+        }
+      },
+      {
+        "comment": "",
+        "key": "以下のコマンドを話すことで、アプリを操作できます",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 583
+        }
+      },
+      {
+        "comment": "",
+        "key": "使用のヒント",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 601
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 622
+        }
+      },
+      {
+        "comment": "",
+        "key": "「%@」",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 655
+        }
+      }
+    ]
+  },
+  "version": 1
+}

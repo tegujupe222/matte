@@ -1,0 +1,224 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/HomeScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Matte",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護を有効にする",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護されています",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護が無効です",
+        "location": {
+          "startingColumn": 69,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべての機能が正常に動作しています",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "設定を確認してください",
+        "location": {
+          "startingColumn": 96,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "警告履歴画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 119
+        }
+      },
+      {
+        "comment": "",
+        "key": "最近の警告",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべて表示",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "クイックアクション",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 165
+        }
+      },
+      {
+        "comment": "",
+        "key": "ブラックリスト画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 170
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急連絡先画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 176
+        }
+      },
+      {
+        "comment": "",
+        "key": "安全チェック画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 182
+        }
+      },
+      {
+        "comment": "",
+        "key": "教育コンテンツ画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 188
+        }
+      },
+      {
+        "comment": "",
+        "key": "AI機能",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 208
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急アクセス",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 306
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声アシスタント画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 322
+        }
+      },
+      {
+        "comment": "",
+        "key": "位置情報共有画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 331
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族連携",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 386
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族メンバー画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 393
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動状況画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 402
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急連絡画面",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 411
+        }
+      },
+      {
+        "comment": "",
+        "key": "フィッシングメールの見分け方",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 472
+        }
+      },
+      {
+        "comment": "",
+        "key": "銀行やクレジットカード会社を装ったメールには注意が必要です。URLをクリックする前に、送信者をよく確認しましょう。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 475
+        }
+      },
+      {
+        "comment": "",
+        "key": "教育コンテンツ詳細画面",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 479
+        }
+      },
+      {
+        "comment": "",
+        "key": "今日のセキュリティ知識",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 466
+        }
+      },
+      {
+        "comment": "",
+        "key": "詳しく学ぶ",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 480
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,272 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/SettingsScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Matte",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "基本設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 165
+        }
+      },
+      {
+        "comment": "",
+        "key": "詐欺手法やセキュリティ知識を学べるコンテンツを提供しています。定期的にチェックして、最新の詐欺手法について学びましょう。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 193
+        }
+      },
+      {
+        "comment": "",
+        "key": "教育コンテンツ",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 181
+        }
+      },
+      {
+        "comment": "",
+        "key": "表示",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 186
+        }
+      },
+      {
+        "comment": "",
+        "key": "アプリ情報",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 210
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急連絡先",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 262
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 265
+        }
+      },
+      {
+        "comment": "",
+        "key": "追加",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 266
+        }
+      },
+      {
+        "comment": "",
+        "key": "連絡先追加",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 320
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 323
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 324
+        }
+      },
+      {
+        "comment": "",
+        "key": "連絡先情報",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 313
+        }
+      },
+      {
+        "comment": "",
+        "key": "名前",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 314
+        }
+      },
+      {
+        "comment": "",
+        "key": "電話番号",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 315
+        }
+      },
+      {
+        "comment": "",
+        "key": "関係",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 317
+        }
+      },
+      {
+        "comment": "",
+        "key": "教育コンテンツ",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 344
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 346
+        }
+      },
+      {
+        "comment": "",
+        "key": "学習",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 366
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急SOS設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 412
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリガー方法",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 426
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリガー方法",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 430
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族連携設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 479
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声アシスタント設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 537
+        }
+      },
+      {
+        "comment": "",
+        "key": "言語",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 564
+        }
+      },
+      {
+        "comment": "",
+        "key": "言語",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 558
+        }
+      },
+      {
+        "comment": "",
+        "key": "音声速度",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 574
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 578
+        }
+      },
+      {
+        "comment": "",
+        "key": "音量",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 589
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 593
+        }
+      },
+      {
+        "comment": "",
+        "key": "統計・レポート設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 621
+        }
+      }
+    ]
+  },
+  "version": 1
+}

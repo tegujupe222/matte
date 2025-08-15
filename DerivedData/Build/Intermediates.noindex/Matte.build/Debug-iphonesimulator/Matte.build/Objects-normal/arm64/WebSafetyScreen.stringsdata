@@ -1,0 +1,200 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/WebSafetyScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "ウェブ安全確認",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 118
+        }
+      },
+      {
+        "comment": "",
+        "key": "ウェブ安全確認有効",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 107
+        }
+      },
+      {
+        "comment": "",
+        "key": "ウェブ安全確認無効",
+        "location": {
+          "startingColumn": 70,
+          "startingLine": 107
+        }
+      },
+      {
+        "comment": "",
+        "key": "危険なウェブサイトを自動的に検出します",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 111
+        }
+      },
+      {
+        "comment": "",
+        "key": "設定で有効にしてください",
+        "location": {
+          "startingColumn": 100,
+          "startingLine": 111
+        }
+      },
+      {
+        "comment": "",
+        "key": "URLを入力してください",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "安全確認を実行",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 150
+        }
+      },
+      {
+        "comment": "",
+        "key": "URL安全確認",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "最近の確認履歴",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 172
+        }
+      },
+      {
+        "comment": "",
+        "key": "リスクスコア: %lld/100",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 204
+        }
+      },
+      {
+        "comment": "",
+        "key": "安全",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "危険",
+        "location": {
+          "startingColumn": 48,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "安全なサイトの例",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "安全確認結果",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 402
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 404
+        }
+      },
+      {
+        "comment": "",
+        "key": "安全なサイト",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 312
+        }
+      },
+      {
+        "comment": "",
+        "key": "危険なサイト",
+        "location": {
+          "startingColumn": 73,
+          "startingLine": 312
+        }
+      },
+      {
+        "comment": "",
+        "key": "リスクスコア",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 327
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/100",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 331
+        }
+      },
+      {
+        "comment": "",
+        "key": "検出された脅威",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 347
+        }
+      },
+      {
+        "comment": "",
+        "key": "推奨アクション",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 367
+        }
+      },
+      {
+        "comment": "",
+        "key": "このサイトをブロック",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 387
+        }
+      },
+      {
+        "comment": "",
+        "key": "詳細レポートを確認",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 394
+        }
+      }
+    ]
+  },
+  "version": 1
+}

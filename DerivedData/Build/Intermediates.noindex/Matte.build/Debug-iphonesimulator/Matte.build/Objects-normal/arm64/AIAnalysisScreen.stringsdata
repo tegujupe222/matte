@@ -1,0 +1,136 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/AIAnalysisScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "AI分析",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 48
+        }
+      },
+      {
+        "comment": "",
+        "key": "分析タイプ",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 160
+        }
+      },
+      {
+        "comment": "",
+        "key": "分析対象",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 218
+        }
+      },
+      {
+        "comment": "",
+        "key": "分析中...",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 239
+        }
+      },
+      {
+        "comment": "",
+        "key": "AI分析を実行",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 239
+        }
+      },
+      {
+        "comment": "",
+        "key": "分析結果",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 265
+        }
+      },
+      {
+        "comment": "",
+        "key": "リスクレベル",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 274
+        }
+      },
+      {
+        "comment": "",
+        "key": "信頼度",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 291
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld%%",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 297
+        }
+      },
+      {
+        "comment": "",
+        "key": "検出された脅威",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 308
+        }
+      },
+      {
+        "comment": "",
+        "key": "推奨アクション",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 331
+        }
+      },
+      {
+        "comment": "",
+        "key": "詳細情報",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 353
+        }
+      },
+      {
+        "comment": "",
+        "key": "最近の分析結果がここに表示されます",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 381
+        }
+      },
+      {
+        "comment": "",
+        "key": "分析履歴",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 375
+        }
+      }
+    ]
+  },
+  "version": 1
+}

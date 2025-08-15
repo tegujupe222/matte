@@ -1,0 +1,352 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/FamilyConnectionScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "家族連携",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "追加",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族状況",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族と位置情報を共有",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 157
+        }
+      },
+      {
+        "comment": "",
+        "key": "位置情報共有",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "共有設定",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 162
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族メンバー",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族メンバーが登録されていません",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 240
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族の安全を守るために、家族メンバーを追加しましょう",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 244
+        }
+      },
+      {
+        "comment": "",
+        "key": "最終アクセス: %@",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 309
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族メンバーを追加すると、緊急時に素早く連絡できます",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 347
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急連絡",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 340
+        }
+      },
+      {
+        "comment": "",
+        "key": "全員に連絡",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 360
+        }
+      },
+      {
+        "comment": "",
+        "key": "登録された全家族に一斉連絡",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 364
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護者に連絡",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 386
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護者設定の家族に連絡",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 390
+        }
+      },
+      {
+        "comment": "",
+        "key": "位置情報共有",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 412
+        }
+      },
+      {
+        "comment": "",
+        "key": "現在地を家族に共有",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 416
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族メンバーの活動状況がここに表示されます",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 478
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動状況",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 471
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 558
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族メンバー追加",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 663
+        }
+      },
+      {
+        "comment": "",
+        "key": "基本情報",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 645
+        }
+      },
+      {
+        "comment": "",
+        "key": "権限設定",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 651
+        }
+      },
+      {
+        "comment": "",
+        "key": "説明",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 657
+        }
+      },
+      {
+        "comment": "",
+        "key": "名前",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 646
+        }
+      },
+      {
+        "comment": "",
+        "key": "電話番号",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 647
+        }
+      },
+      {
+        "comment": "",
+        "key": "関係",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 648
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護者として設定",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 652
+        }
+      },
+      {
+        "comment": "",
+        "key": "警告を表示",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 653
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知を受信",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 654
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護者として設定すると、緊急時に優先的に連絡されます。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 658
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 667
+        }
+      },
+      {
+        "comment": "",
+        "key": "追加",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 673
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 712
+        }
+      },
+      {
+        "comment": "",
+        "key": "保護者",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 750
+        }
+      },
+      {
+        "comment": "",
+        "key": "連絡情報",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 772
+        }
+      },
+      {
+        "comment": "",
+        "key": "権限設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 860
+        }
+      },
+      {
+        "comment": "",
+        "key": "アクション",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 921
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族招待",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 1033
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族を招待",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 997
+        }
+      },
+      {
+        "comment": "",
+        "key": "家族の安全を守るために、Matteアプリを家族と共有しましょう",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 1001
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 1037
+        }
+      }
+    ]
+  },
+  "version": 1
+}

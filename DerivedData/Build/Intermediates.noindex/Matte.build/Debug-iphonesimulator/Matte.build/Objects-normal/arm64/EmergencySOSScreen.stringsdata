@@ -1,0 +1,272 @@
+{
+  "source": "/Users/igasakigouta/Desktop/compleat/NEW＿完成させるよ/Matte/Matte/EmergencySOSScreen.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "緊急SOS",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 61
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 175
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld秒後に実行",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 150
+        }
+      },
+      {
+        "comment": "",
+        "key": "タップして緊急通報",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 154
+        }
+      },
+      {
+        "comment": "",
+        "key": "SOS実行中...",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急SOS",
+        "location": {
+          "startingColumn": 57,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "SOS機能を有効にする",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 200
+        }
+      },
+      {
+        "comment": "",
+        "key": "SOS設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "カスタムメッセージ",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 206
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急メッセージを入力",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 210
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急連絡先が設定されていません",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 243
+        }
+      },
+      {
+        "comment": "",
+        "key": "緊急連絡先",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 231
+        }
+      },
+      {
+        "comment": "",
+        "key": "追加",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 236
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリガー方法",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 313
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリガー設定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 302
+        }
+      },
+      {
+        "comment": "",
+        "key": "テスト",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 307
+        }
+      },
+      {
+        "comment": "",
+        "key": "自動通話",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 345
+        }
+      },
+      {
+        "comment": "",
+        "key": "自動メッセージ送信",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 348
+        }
+      },
+      {
+        "comment": "",
+        "key": "位置情報共有",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 351
+        }
+      },
+      {
+        "comment": "",
+        "key": "自動アクション",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 339
+        }
+      },
+      {
+        "comment": "",
+        "key": "安全機能",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 367
+        }
+      },
+      {
+        "comment": "",
+        "key": "連絡先選択",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 452
+        }
+      },
+      {
+        "comment": "",
+        "key": "新しい連絡先",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 439
+        }
+      },
+      {
+        "comment": "",
+        "key": "既存の連絡先",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 445
+        }
+      },
+      {
+        "comment": "",
+        "key": "名前",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 440
+        }
+      },
+      {
+        "comment": "",
+        "key": "電話番号",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 441
+        }
+      },
+      {
+        "comment": "",
+        "key": "関係",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 442
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 456
+        }
+      },
+      {
+        "comment": "",
+        "key": "追加",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 462
+        }
+      },
+      {
+        "comment": "",
+        "key": "テスト",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 514
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリガーテスト",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 490
+        }
+      },
+      {
+        "comment": "",
+        "key": "上記の操作を行ってください",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 498
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 518
+        }
+      }
+    ]
+  },
+  "version": 1
+}

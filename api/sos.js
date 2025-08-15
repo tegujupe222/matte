@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { userId } = req.query;
+  const { userId } = req.method === 'GET' ? req.query : req.body;
 
   if (!userId) {
     return res.status(400).json({ error: 'User ID is required' });

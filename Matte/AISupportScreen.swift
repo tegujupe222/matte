@@ -82,7 +82,9 @@ struct AISupportScreen: View {
             .background(Color(.systemGroupedBackground))
         }
         .alert("エラー", isPresented: $showingError) {
-            Button("OK") { }
+            Button("OK") { 
+                showingError = false
+            }
         } message: {
             Text(errorMessage)
         }
