@@ -1,6 +1,7 @@
 {
   "name": "matte-server",
   "version": "1.0.0",
+  "type": "module",
   "description": "Matte iOS App Backend Server with Gemini AI Integration",
   "main": "index.js",
   "scripts": {
